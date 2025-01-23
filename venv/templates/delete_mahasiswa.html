@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Hapus Mahasiswa</h1>
+<p>Apakah Anda yakin ingin menghapus mahasiswa berikut?</p>
+<ul>
+    <li><strong>NIM:</strong> {{ mahasiswa.nim }}</li>
+    <li><strong>Nama:</strong> {{ mahasiswa.nama }}</li>
+    <li><strong>Jurusan:</strong> {{ mahasiswa.jurusan }}</li>
+</ul>
+<form method="POST">
+    <button type="submit" class="btn btn-danger">Hapus</button>
+    <a href="{{ url_for('index') }}" class="btn btn-secondary">Batal</a>
+</form>
+{% endblock %}
